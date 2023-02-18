@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .inputIcon {
+    @apply flex items-center space-x-1 hover:bg-slate-100 flex-grow justify-center p-2 rounded-xl cursor-pointer;
+  }
+  
+}
+
+.inputCustom{
+   border: none;
+   
+   
+}
+.inputCustom:focus{
+  
+   
+   border-radius: 8px;
+   border: 0px solid rgb(255, 255, 255);
+   box-shadow: 0 0 0 0px #ffffff;
+
+
+   
+}
