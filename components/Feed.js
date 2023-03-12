@@ -5,7 +5,7 @@ import Posts from "./Posts";
 
 function Feed() {
   return (
-    <div className="flex-grow h-screen pb-44 pt-6">
+    <div className="flex-grow h-screen pb-44 pt-20 overflow-y-auto scrollbar-hide">
       
       <div>
         {/* stories */}

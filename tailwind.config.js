@@ -8,5 +8,7 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("flowbite/plugin")],
+  plugins:[
+    require('tailwind-scrollbar-hide')
+  ],
 };

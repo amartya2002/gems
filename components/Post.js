@@ -4,22 +4,22 @@ import {ChatBubbleBottomCenterTextIcon, ShareIcon, HandThumbUpIcon} from "@heroi
 
 function Post({ name, profilepic, image, date, text }) {
   return (
-    <div className="flex flex-col max-w-md mx-auto sm:max-w-lg ">
-      <div className="p-5 bg-white mt-5 rounded-2xl shadow-md border">
-        <div className=" flex items-center space-x-2">
+    <div className="flex flex-col max-w-md mx-auto sm:max-w-lg  ">
+      <div className="p-5 bg-white mt-5 rounded-2xl shadow-md border ">
+        <div className=" flex items-center space-x-2 ">
           <img
-            className="rounded-full w-8 h-8"
+            className="rounded-full w-8 h-8 "
             src={profilepic}
             width={40}
             height={40}
           />
           <div>
-            <p className="font-medium">{name}</p>
+            <p className="font-medium text-slate-800 tracking-wide ">{name}</p>
             <p className="text-xs text-slate-400">{date}</p>
           </div>
         </div>
 
-        <p className="pt-4 ">{text}</p>
+        <p className="pt-2 text-slate-650   text-[15px] antialiased font ">{text}</p>
         {image && (
           <div className=" object-cover relative h-56 md:h-96 my-3">
             <Image

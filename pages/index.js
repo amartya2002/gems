@@ -2,8 +2,11 @@ import Head from "next/head";
 import Header from "components/Header";
 import Feed from "components/Feed";
 import Sidebar from "@/components/Sidebar";
+import SidebarRight from "@/components/SidebarRight";
 import NavbarFlow from "@/components/NavbarFlow";
-import Dropdown from "components/Dropdown";
+import NewSidebarLeft from "@/components/NewSidebar/NewSidebarLeft";
+import BottomNav from "@/components/BottomNav";
+// import Dropdown from "components/Dropdown";
 
 
 
@@ -26,14 +29,16 @@ export default function Home() {
       <main className="flex">
         {/* {sidebar} */}
         {/* <Sidebar/> */}
+        {/* <NewSidebarLeft/> */}
         {/* {feed} */}
         <Feed/>
-        <Dropdown/>
+        {/* <Dropdown/> */}
         {/* {widgets} */}
-        {/* <Sidebar/> */}
+        {/* <SidebarRight/> */}
         
-
       </main>
+      <BottomNav/>
+     
     </div>
   );
 }
