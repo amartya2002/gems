@@ -6,12 +6,15 @@ import SidebarRight from "@/components/SidebarRight";
 import NavbarFlow from "@/components/NavbarFlow";
 import NewSidebarLeft from "@/components/NewSidebar/NewSidebarLeft";
 import BottomNav from "@/components/BottomNav";
+import Guest from "@/components/Guest";
+import { useState } from "react";
+import { getSession, useSession, signIn, signOut } from "next-auth/react";
+
 // import Dropdown from "components/Dropdown";
 
-
-
-
 export default function Home() {
+  const {data: session} = useSession();
+
   return (
     <div>
       <Head>
@@ -21,24 +24,43 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <NavbarFlow/> */}
-      
-
-      <Header />
-
-      <main className="flex">
-        {/* {sidebar} */}
-        {/* <Sidebar/> */}
-        {/* <NewSidebarLeft/> */}
-        {/* {feed} */}
-        <Feed/>
-        {/* <Dropdown/> */}
-        {/* {widgets} */}
-        {/* <SidebarRight/> */}
-        
-      </main>
-      <BottomNav/>
-     
+      {session ? User({ session }) : Guest()}
     </div>
   );
+}
+
+function User({ session }) {
+  return (
+    <div>
+
+      <Header />
+      <main className="flex">
+        {/* <Sidebar /> */}
+        {/* <NewSidebarLeft />  */}
+        <Feed />
+        {/* <Dropdown /> */}
+        {/* <SidebarRight /> */}
+      </main>
+      <BottomNav />
+      <h1>{session.user.name}</h1>
+      <h1>{session.user.email}</h1>
+    <button className="text-blue-500" onClick={signOut}>Sign out</button>
+
+    </div>
+  );
+}
+
+export async function getServerSideProps({req}){
+  const session=await getSession({req})
+  if(!session){
+    return{
+      redirect:{
+        destination:'/login',
+        permanent: false
+      }
+    }
+  }
+  return {
+    props:{ session}
+  }
 }

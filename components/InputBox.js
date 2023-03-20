@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import {
   VideoCameraIcon,
@@ -6,9 +6,13 @@ import {
   CameraIcon,
 } from "@heroicons/react/24/solid";
 
+
 function InputBox() {
+  
   const sendPost = (e) => {
     e.preventDefault();
+
+ 
   };
   return (
     <div className="bg-white p-2 rounded-2xl shadow-sm border border-slate-50 text-grey-500 font-medium mt-6  max-w-sm mx-auto">
@@ -23,6 +27,7 @@ function InputBox() {
           <input
             className="rounded-2xl h-12 bg-slate-100 flex-grow px-4  focus:outline-none "
             type="text"
+     
             placeholder="Whats on your mind"
           />
           <button hidden type="submit" onClick={sendPost}></button>
