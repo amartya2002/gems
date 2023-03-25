@@ -1,43 +1,35 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApp, getApps } from "firebase/app";
+import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+import { getStorage, ref } from "firebase/storage";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC9pBlis4nQuCeGFyTFTfaPQtG4ljjRdEI",
-  authDomain: "gems-218db.firebaseapp.com",
-  projectId: "gems-218db",
-  storageBucket: "gems-218db.appspot.com",
-  messagingSenderId: "817821166897",
-  appId: "1:817821166897:web:a09866ef60c0b6851c9410",
+  apiKey: "AIzaSyAmhfwnYIczhcDcbyKCN7LIa4yetxEYXJU",
+  authDomain: "gems-621e9.firebaseapp.com",
+  projectId: "gems-621e9",
+  storageBucket: "gems-621e9.appspot.com",
+  messagingSenderId: "999633149014",
+  appId: "1:999633149014:web:9a4f25ac69e0260e4e2ff7",
 };
 
-// Check if Firebase has already been initialized
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+const db = getFirestore(app);
+const auth = getAuth(app);
+const storage = getStorage(app);
+const storageRef=ref(storage)
+const imagesRef = ref(storageRef, 'images');
+const fileName = 'space.jpg';
+const spaceRef = ref(imagesRef, fileName);
 
-  // Initialize Firebase
-  try{
-    const app = initializeApp(firebaseConfig);
+// File path is 'images/space.jpg'
+const path = spaceRef.fullPath;
 
-  } catch(err){
-    console.log(err)
-    console.log("heheh")
-  }
-  // Initialize Cloud Firestore and get a reference to the service
+// File name is 'space.jpg'
+const name = spaceRef.name;
 
-
-
-try{
-     const db = getFirestore(app);
-
-  } catch(err){
-    console.log(err)
-    console.log("hehgyugeh")
-  }
-export{db}
+// Points to 'images'
+const imagesRefAgain = spaceRef.parent;
 
 
-
+// export
+export { app, auth, db, storage };

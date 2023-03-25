@@ -35,16 +35,14 @@ function User({ session }) {
 
       <Header />
       <main className="flex">
-        {/* <Sidebar /> */}
+        <Sidebar />
         {/* <NewSidebarLeft />  */}
         <Feed />
         {/* <Dropdown /> */}
-        {/* <SidebarRight /> */}
+        <SidebarRight />
       </main>
       <BottomNav />
-      <h1>{session.user.name}</h1>
-      <h1>{session.user.email}</h1>
-    <button className="text-blue-500" onClick={signOut}>Sign out</button>
+     
 
     </div>
   );
