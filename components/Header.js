@@ -52,6 +52,8 @@ function Header() {
       {/* right */}
       <div className="flex items-center sm:space-x-2 justify-end  ">
         <DropdownAvatar />
+      
+
 
         {/* profilepic */}
         {/* <Image

@@ -10,10 +10,8 @@ import Guest from "@/components/Guest";
 import { useState } from "react";
 import { getSession, useSession, signIn, signOut } from "next-auth/react";
 
-// import Dropdown from "components/Dropdown";
-
 export default function Home() {
-  const {data: session} = useSession();
+  const { data: session } = useSession();
 
   return (
     <div>
@@ -32,33 +30,30 @@ export default function Home() {
 function User({ session }) {
   return (
     <div>
-
       <Header />
-      <main className="flex">
+      <main className="flex bg-slate-50">
         <Sidebar />
         {/* <NewSidebarLeft />  */}
         <Feed />
         {/* <Dropdown /> */}
         <SidebarRight />
       </main>
-      <BottomNav />
-     
-
+      {/* <BottomNav /> */}
     </div>
   );
 }
 
-export async function getServerSideProps({req}){
-  const session=await getSession({req})
-  if(!session){
-    return{
-      redirect:{
-        destination:'/login',
-        permanent: false
-      }
-    }
+export async function getServerSideProps({ req }) {
+  const session = await getSession({ req });
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
   }
   return {
-    props:{ session}
-  }
+    props: { session },
+  };
 }

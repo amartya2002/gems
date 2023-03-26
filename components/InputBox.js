@@ -27,6 +27,7 @@ function InputBox() {
       name: session.user.name,
       email: session.user.email,
       timestamp: serverTimestamp(),
+      image:session.user.image,
     });
 
     if (imageToPost) {
@@ -64,13 +65,13 @@ function InputBox() {
       <div className="flex space-x-4 p-4 items-center ">
         <Image
           className=" w-9 h-9 rounded-full -ml-1 "
-          src="/assets/profilepic3.jpg"
+          src={session.user.image}
           height={40}
           width={40}
         />
         <form className="flex flex-1">
           <input
-            className="rounded-2xl h-12 bg-slate-100 flex-grow px-4  focus:outline-none "
+            className="rounded-2xl h-12 bg-slate-100 flex-grow px-4   "
             type="text"
             ref={inputRef}
             placeholder="Whats on your mind"
@@ -87,13 +88,13 @@ function InputBox() {
           </div>
         )}
       </div>
-      <div className="flex justify-evenly p-1 border-t">
-        <div
+      <div className="flex justify-evenly p-1 border-t ">
+        <div 
           onClick={() => filePickerRef.current.click()}
-          className="inputIcon"
+          className="inputIcon "
         >
-          <CameraIcon className="h-6 text-black" />
-          <p className="text-xs sm:text-sm xl:text-base">Photo</p>
+          <CameraIcon className="h-6 text-red-400 " />
+          <p className="text-xs sm:text-sm  text-slate-700 ">Photo</p>
           <input
             ref={filePickerRef}
             onChange={addImageToPost}
@@ -103,13 +104,13 @@ function InputBox() {
         </div>
 
         <div className="inputIcon">
-          <EllipsisHorizontalCircleIcon className="h-6 text-black   " />
-          <p className="text-xs sm:text-sm xl:text-base">More</p>
+          <EllipsisHorizontalCircleIcon className="h-6 text-green-400   " />
+          <p className="text-xs sm:text-sm  text-slate-700">More</p>
         </div>
 
         <div className="inputIcon">
-          <VideoCameraIcon className="h-6 text-black" />
-          <p className="text-xs sm:text-sm xl:text-base">Video</p>
+          <VideoCameraIcon className="h-6 text-orange-400" />
+          <p className="text-xs sm:text-sm  text-slate-700">Video</p>
         </div>
       </div>
     </div>

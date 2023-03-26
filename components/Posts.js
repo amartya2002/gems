@@ -1,45 +1,35 @@
-import React from "react";
-import Post from "./Post";
+import { collection, doc, getDocs, query, orderBy } from 'firebase/firestore';
+import { useCollection } from 'react-firebase-hooks/firestore';
+import React from 'react';
+import Post from './Post';
+import { db, storage } from '../firebase';
 
-const posts = [
-  {
-    name: "Amartya Sinha",
-    profilepic: "/assets/profilepic1.jpg",
-    image: "/assets/displaypic1.jpg",
-    date: "5mins ago",
-    text: "This is my first post, I am working on the front end part of this web app. The following is the tech stack: Javascript, Nextjs",
-  },
-  {
-    name: "Jane Dow",
-    profilepic: "/assets/profilepic2.jpg",
-    image: "/assets/displaypic2.jpg",
-    date: "24hrs ago",
-    text: "This is my first post",
-  },
-  {
-    name: "XYJJJJJJJJ OPOPOPLOPL",
-    profilepic: "/assets/profilepic3.jpg",
-    image: "/assets/displaypic3.jpg",
-    date: "1day ago",
-    text: "This is my first post",
-  },
-];
 
 function Posts() {
+  const postsRef = collection(db, 'posts');
+  const postsQuery = query(postsRef, orderBy('timestamp', 'desc'));
+  const [realtimePosts] = useCollection(postsQuery);
+  console.log(realtimePosts, "hello");
+ 
+ 
+
   return (
-    <div className="">
-      {posts.map((post) => (
+    <div>
+      {realtimePosts?.docs.map((post) => (
         <Post
-          key={post.src}
-          name={post.name}
-          profilepic={post.profilepic}
-          image={post.image}
-          date={post.date}
-          text={post.text}
+          id={post.id}
+          name={post.data().name}
+          message={post.data().message}
+          timestamp={post.data().timestamp}
+          image={post.data().image}
+          postImage={post.data().postImage}
+         
         />
       ))}
     </div>
   );
+  
 }
 
 export default Posts;
+
