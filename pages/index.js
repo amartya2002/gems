@@ -30,14 +30,14 @@ function User({ session }) {
   return (
     <div>
       <Header />
-      <main className="flex bg-slate-50">
+      <main className="flex ">
         <Sidebar />
         {/* <NewSidebarLeft />  */}
         <Feed />
         {/* <Dropdown /> */}
         <SidebarRight />
       </main>
-      {/* <BottomNav /> */}
+      <BottomNav />
     </div>
   );
 }
