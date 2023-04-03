@@ -31,7 +31,7 @@ function BottomNav() {
             >
               <div className="flex flex-col   ">
                 <i className="far fa-compass text-2xl pt-1 mb-1 block"></i>
-                <BellIcon className="h-6 text-blue-400 " />
+                <BellIcon className="h-6 text-green-400 " />
                 <span className="block text-xs pb-1">Explore</span>
               </div>
             </a>
@@ -43,7 +43,7 @@ function BottomNav() {
             >
               <div className="flex flex-col   ">
                 <i className="far fa-search text-2xl pt-1 mb-1 block"></i>
-                <NewspaperIcon className="h-6 text-purple-500" />
+                <NewspaperIcon className="h-6 text-green-400" />
                 <span className="block text-xs pb-1">Search</span>
               </div>
             </a>
@@ -55,7 +55,7 @@ function BottomNav() {
             >
               <div className="flex flex-col   ">
                 <i className="far fa-cog text-2xl pt-1 mb-1 block"></i>
-                <UserIcon className="h-6 text-green-400" />
+                <UserIcon className="h-6 text-orange-400" />
                 <span className="block text-xs pb-1">Settings</span>
               </div>
             </a>
