@@ -3,6 +3,7 @@ import { Fragment, useEffect, useRef, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { getSession, useSession, signOut } from "next-auth/react";
 import Link from 'next/link'
+import Image from 'next/image';
 
 export default function DropdownAvatar() {
   const {data: session} = useSession()
@@ -11,10 +12,12 @@ export default function DropdownAvatar() {
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center rounded-full transition hover:scale-110 duration-75 ease-in  ">
-          <img
+          <Image
               className="h-10 w-10 rounded-full"
               src={session.user.image}
               alt="User avatar"
+              width={10}
+      height={10}
             />
             {/* <ChevronDownIcon
               className="h-5 w-5 mt-2 text-violet-400 hover:text-violet-600"

@@ -8,10 +8,13 @@ function StoryCard({name, src, profile}) {
         src={profile}
         width={40}
         height={40}
+        alt="stories author image"
       />
       <Image
         className="object-cover filter brightness-75 rounded-full lg:rounded-3xl"
         src={src}
+        alt="stories image"
+
         layout="fill"
       />
     </div>

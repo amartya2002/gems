@@ -2,8 +2,9 @@ import Head from "next/head";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import Link from "next/link";
 
-const login = () => {
+const Login = () => {
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -12,9 +13,9 @@ const login = () => {
     validationSchema: Yup.object({
       email: Yup.string().email("Invalid").required("Required"),
       password: Yup.string()
-  .required('Required') 
-  .min(8, 'Password must be 8 or more characters')
-  .matches(/[a-zA-Z]/, 'Password can only contain Latin letters.')
+        .required("Required")
+        .min(8, "Password must be 8 or more characters")
+        .matches(/[a-zA-Z]/, "Password can only contain Latin letters."),
     }),
 
     onSubmit: (values) => {
@@ -37,12 +38,10 @@ const login = () => {
           <div className="mt-10 my-6">
             <h2 className="text-4xl tracking-tight my-1">Sign in</h2>
             <span className="text-md">
-              <a href="/register" className="tracking-tight">
-                No account?{" "}
-                <span className="text-blue-500 hover:text-blue-700 font-medium">
+              <Link href="/register" className="tracking-tight"><span className="text-blue-500 hover:text-blue-700 font-medium">
                   Register here
-                </span>
-              </a>
+                </span></Link>
+              
             </span>
           </div>
           <form onSubmit={formik.handleSubmit}>
@@ -61,10 +60,11 @@ const login = () => {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
-                  />  {formik.touched.email && formik.errors.email ? (
-
-                    <div className=" bg-slate-200 rounded-xl px-2 absolute top-[31%] mx-[266px] tracking-wide text-red-300 font-medium text-xs">{formik.errors.email}</div>
-           
+                  />{" "}
+                  {formik.touched.email && formik.errors.email ? (
+                    <div className=" bg-slate-200 rounded-xl px-2 absolute top-[31%] mx-[266px] tracking-wide text-red-300 font-medium text-xs">
+                      {formik.errors.email}
+                    </div>
                   ) : null}
                 </label>
               </div>
@@ -84,10 +84,10 @@ const login = () => {
                     value={formik.values.password}
                   />
                   {formik.touched.password && formik.errors.password ? (
-
-<div className=" bg-slate-200 rounded-xl px-2  absolute top-[48%]  tracking-wide text-red-300 font-medium text-xs">{formik.errors.password}</div>
-
-) : null}
+                    <div className=" bg-slate-200 rounded-xl px-2  absolute top-[48%]  tracking-wide text-red-300 font-medium text-xs">
+                      {formik.errors.password}
+                    </div>
+                  ) : null}
                 </label>
               </div>
 
@@ -167,4 +167,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

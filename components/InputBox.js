@@ -68,6 +68,7 @@ function InputBox() {
           src={session.user.image}
           height={40}
           width={40}
+          alt="User Image"
         />
         <form className="flex flex-1">
           <input

@@ -34,11 +34,13 @@ console.log(id)
         {/* //////////////////////// */}
         <div className=" flex justify-between ">
           <div className="flex  items-center  space-x-2 ">
-            <img
-              className="rounded-full w-8 h-8 "
+            <Image
+              className="rounded-full w-8 h-8 text-xs text-slate-300 tracking-tighter "
               src={image}
               width={40}
               height={40}
+              alt="Author Image"
+              // I want to display random anime/cartoon image if user image is not present there, instead of showing just plain text
             />
             
 
@@ -68,6 +70,7 @@ console.log(id)
               layout="fill"
               objectFit="contain"
               className="absolute top-0 left-0 w-full h-full object-contain rounded-xl"
+              alt="Post Image"
             />
           </div>
         )}

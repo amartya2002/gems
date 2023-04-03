@@ -18,6 +18,7 @@ function SidebarRow({ src, Icon, title, colour }) {
           src={src}
           width={30}
           height={30}
+          alt="Icons"
           layout="fixed"
         />
       )}
