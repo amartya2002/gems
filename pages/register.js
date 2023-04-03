@@ -11,12 +11,10 @@ const Register = () => {
       <div className=" flex h-screen justify-center ">
         <div className="w-full max-w-sm  rounded-lg  p-6 ">
           <div className="mt-10 my-6">
-            <h2 className="text-4xl tracking-tight my-1">Register</h2>
-            <span className="text-md">
-            <Link href="/login" className="tracking-tight"><span className="text-blue-500 hover:text-blue-700 font-medium">
-                  Register here
-                </span></Link>
-            </span>
+            <h2 className="text-4xl tracking-tight my-1">Sign up</h2>
+            <div>
+<p className=" text-slate-500">Already registered?  <Link href="/login" className="tracking-tight text-blue-500 hover:text-blue-700 font-medium  "> Sign in </Link> </p>  
+</div>
           </div>
 
           <div>

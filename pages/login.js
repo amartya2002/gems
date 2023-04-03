@@ -25,7 +25,7 @@ const Login = () => {
 
   //google handler func
   async function handleGooglesignIn() {
-    signIn("google", { callbackUrl: "http://localhost:3000" });
+    signIn("google", { callbackUrl: "https://gems-chi.vercel.app" });
   }
   return (
     <>
@@ -37,12 +37,16 @@ const Login = () => {
         <div className="w-full max-w-sm  rounded-lg  p-6 ">
           <div className="mt-10 my-6">
             <h2 className="text-4xl tracking-tight my-1">Sign in</h2>
-            <span className="text-md">
-              <Link href="/register" className="tracking-tight ">Not yet registerd?<span className="text-blue-500 hover:text-blue-700 font-medium">
-                  Register Now
-                </span></Link>
+  
+<div>
+<p className=" text-slate-500">Not yet registered?  <Link href="/register" className="tracking-tight text-blue-500 hover:text-blue-700 font-medium  "> Sign up </Link> </p>  
+</div>
+            
+
               
-            </span>
+             
+              
+            
           </div>
           <form onSubmit={formik.handleSubmit}>
             <div className="">
