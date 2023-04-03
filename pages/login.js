@@ -38,8 +38,8 @@ const Login = () => {
           <div className="mt-10 my-6">
             <h2 className="text-4xl tracking-tight my-1">Sign in</h2>
             <span className="text-md">
-              <Link href="/register" className="tracking-tight"><span className="text-blue-500 hover:text-blue-700 font-medium">
-                  Register here
+              <Link href="/register" className="tracking-tight ">Not yet registerd?<span className="text-blue-500 hover:text-blue-700 font-medium">
+                  Register Now
                 </span></Link>
               
             </span>
