@@ -75,7 +75,7 @@ function InputBox() {
             className="rounded-2xl h-12 bg-slate-100 flex-grow px-4   "
             type="text"
             ref={inputRef}
-            placeholder="Whats on your mind"
+            placeholder="What's up!!!"
           />
           <button hidden type="submit" onClick={sendPost}></button>
         </form>
