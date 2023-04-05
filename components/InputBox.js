@@ -68,6 +68,7 @@ function InputBox() {
           src={session.user.image}
           height={40}
           width={40}
+          alt="User Image"
         />
         <form className="flex flex-1">
           <input
@@ -83,7 +84,7 @@ function InputBox() {
             onClick={removeImage}
             className="  flex flex-col filter hover:brightness-110 transition duration-150 transform hover:scale-105 cursor-pointer"
           >
-            <img className=" h-10 object-contain " src={imageToPost} alt="" />
+            <Image className=" h-10 object-contain " src={imageToPost} alt="" />
             <p className="text-xs text-red-500 text-center">Remove</p>
           </div>
         )}

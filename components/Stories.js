@@ -3,17 +3,17 @@ import StoryCard from "./StoryCard";
 const stories = [
   {
     name: "Amartya Sinha1",
-    src: "/assets/profilepic1.jpg",
+    src: "/assets/pexels-steve-johnson-1269968.jpg",
     profile: "/assets/displaypic1.jpg",
   },
   {
     name: "Amartya Sinha2",
-    src: "/assets/profilepic2.jpg",
+    src: "/assets/pexels-juan-pablo-serrano-arenas-904276.jpg",
     profile: "/assets/displaypic2.jpg",
   },
   {
     name: "Amartya Sinha3",
-    src: "/assets/profilepic3.jpg",
+    src: "/assets/pexels-anni-roenkae-2860807.jpg",
     profile: "/assets/displaypic3.jpg",
   },
 ];

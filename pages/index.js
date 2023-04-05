@@ -3,7 +3,6 @@ import Header from "components/Header";
 import Feed from "components/Feed";
 import Sidebar from "@/components/Sidebar";
 import SidebarRight from "@/components/SidebarRight";
-import NavbarFlow from "@/components/NavbarFlow";
 import NewSidebarLeft from "@/components/NewSidebar/NewSidebarLeft";
 import BottomNav from "@/components/BottomNav";
 import Guest from "@/components/Guest";
@@ -31,14 +30,14 @@ function User({ session }) {
   return (
     <div>
       <Header />
-      <main className="flex bg-slate-50">
+      <main className="flex ">
         <Sidebar />
         {/* <NewSidebarLeft />  */}
         <Feed />
         {/* <Dropdown /> */}
         <SidebarRight />
       </main>
-      {/* <BottomNav /> */}
+      <BottomNav />
     </div>
   );
 }
