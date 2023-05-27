@@ -23,7 +23,7 @@ function Header() {
             src="/assets/logo2.svg"
             width={60}
             height={60}
-            alt="Company Logo"
+            alt="Company Logo "
           />
         </Link>
 

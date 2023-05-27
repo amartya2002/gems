@@ -8,6 +8,7 @@ import BottomNav from "@/components/BottomNav";
 import Guest from "@/components/Guest";
 import { useState } from "react";
 import { getSession, useSession, signIn, signOut } from "next-auth/react";
+import Header_new from "@/components/ui-v2/Header_new";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -29,7 +30,8 @@ export default function Home() {
 function User({ session }) {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
+      <Header_new/>
       <main className="flex ">
         <Sidebar />
         {/* <NewSidebarLeft />  */}
