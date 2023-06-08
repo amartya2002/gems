@@ -1,14 +1,14 @@
 import Head from "next/head";
-import Header from "components/Header";
-import Feed from "components/Feed";
-import Sidebar from "@/components/Sidebar";
-import SidebarRight from "@/components/SidebarRight";
-import NewSidebarLeft from "@/components/NewSidebar/NewSidebarLeft";
-import BottomNav from "@/components/BottomNav";
-import Guest from "@/components/Guest";
+import Header from "../components/Header";
+import Feed from "../components/Feed";
+import Sidebar from "../components/Sidebar";
+import SidebarRight from "../components/SidebarRight";
+import NewSidebarLeft from "../components/NewSidebar/NewSidebarLeft";
+import BottomNav from "../components/BottomNav";
+import Guest from "../components/Guest";
 import { useState } from "react";
 import { getSession, useSession, signIn, signOut } from "next-auth/react";
-import Header_new from "@/components/ui-v2/Header_new";
+import Header_new from "../components/ui-v2/Header_new";
 
 export default function Home() {
   const { data: session } = useSession();
