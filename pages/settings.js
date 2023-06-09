@@ -11,7 +11,7 @@ function SettingsPage({ session }) {
       </div>
       <BottomNav />
     </div>
-  )
+  );
 }
 
 export async function getServerSideProps(context) {

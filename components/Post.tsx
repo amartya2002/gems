@@ -67,8 +67,8 @@ console.log(id)
           <div className=" z-0 rounded relative mb-2 h-0 overflow-hidden pt-[60%] ">
             <Image
               src={postImage}
-              layout="fill"
-              objectFit="contain"
+              // layout="fill"
+              // objectFit="contain"
               className="absolute top-0 left-0 w-full h-full object-contain rounded-xl"
               alt="Post Image"
             />

@@ -3,11 +3,11 @@ import React from "react";
 function SidebarContent() {
   return (
     <div>
-      <div class="  fixed top-0 left-0 bottom-0 z-[60] w-64  bg-white border-r border-gray-200 pt-7 pb-10 overflow-y-auto scrollbar-y lg:block  lg:right-auto lg:bottom-0 dark:scrollbar-y adark:bg-gray-800 adark:border-gray-700">
+      <div className="  fixed top-0 left-0 bottom-0 z-[60] w-64  bg-white border-r border-gray-200 pt-7 pb-10 overflow-y-auto scrollbar-y lg:block  lg:right-auto lg:bottom-0 dark:scrollbar-y adark:bg-gray-800 adark:border-gray-700">
       
 
-        {/* <div class="px-6">
-          <a class="flex-none text-xl font-semibold " aria-label="Brand">
+        {/* <div className="px-6">
+          <a className="flex-none text-xl font-semibold " aria-label="Brand">
             Brand
           </a>
         </div> */}
@@ -24,12 +24,12 @@ function SidebarContent() {
                             </div>
                             </div>
 
-        <nav class=" p-3 pr-4 w-full flex flex-col flex-wrap">
-          <ul class="space-y-1.5">
+        <nav className=" p-3 pr-4 w-full flex flex-col flex-wrap">
+          <ul className="space-y-1.5">
             <li>
-              <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-semibold text-silver rounded-md hover:text-white hover:bg-black active:scale-105  duration-200">
+              <a className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-semibold text-silver rounded-md hover:text-white hover:bg-black active:scale-105  duration-200">
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
@@ -49,13 +49,13 @@ function SidebarContent() {
               </a>
             </li>
 
-            <li class="hs-accordion" id="users-accordion">
+            <li className="hs-accordion" id="users-accordion">
               <a
-                class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-semibold text-silver rounded-md hover:text-white hover:bg-black active:scale-105  duration-200"
+                className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-semibold text-silver rounded-md hover:text-white hover:bg-black active:scale-105  duration-200"
                 href="javascript:;"
               >
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
@@ -66,7 +66,7 @@ function SidebarContent() {
                 </svg>
                 Users
                 <svg
-                  class="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                  className="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                   width="16"
                   height="16"
                   viewBox="0 0 16 16"
@@ -81,7 +81,7 @@ function SidebarContent() {
                   ></path>
                 </svg>
                 <svg
-                  class="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                  className="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                   width="16"
                   height="16"
                   viewBox="0 0 16 16"
@@ -99,20 +99,20 @@ function SidebarContent() {
 
               <div
                 id="users-accordion"
-                class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
+                className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
               >
                 <ul
-                  class="hs-accordion-group pl-3 pt-2"
+                  className="hs-accordion-group pl-3 pt-2"
                   data-hs-accordion-always-open
                 >
-                  <li class="hs-accordion" id="users-accordion-sub-1">
+                  <li className="hs-accordion" id="users-accordion-sub-1">
                     <a
-                      class="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
+                      className="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
                       href="javascript:;"
                     >
                       Sub Menu 1
                       <svg
-                        class="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                        className="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                         width="16"
                         height="16"
                         viewBox="0 0 16 16"
@@ -127,7 +127,7 @@ function SidebarContent() {
                         ></path>
                       </svg>
                       <svg
-                        class="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                        className="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                         width="16"
                         height="16"
                         viewBox="0 0 16 16"
@@ -145,12 +145,12 @@ function SidebarContent() {
 
                     <div
                       id="users-accordion-sub-1"
-                      class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
+                      className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
                     >
-                      <ul class="pt-2 pl-2">
+                      <ul className="pt-2 pl-2">
                         <li>
                           <a
-                            class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                            className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                             href="javascript:;"
                           >
                             Link 1
@@ -158,7 +158,7 @@ function SidebarContent() {
                         </li>
                         <li>
                           <a
-                            class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                            className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                             href="javascript:;"
                           >
                             Link 2
@@ -166,7 +166,7 @@ function SidebarContent() {
                         </li>
                         <li>
                           <a
-                            class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                            className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                             href="javascript:;"
                           >
                             Link 3
@@ -175,14 +175,14 @@ function SidebarContent() {
                       </ul>
                     </div>
                   </li>
-                  <li class="hs-accordion" id="users-accordion-sub-2">
+                  <li className="hs-accordion" id="users-accordion-sub-2">
                     <a
-                      class="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
+                      className="hs-accordion-toggle flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white"
                       href="javascript:;"
                     >
                       Sub Menu 2
                       <svg
-                        class="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                        className="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                         width="16"
                         height="16"
                         viewBox="0 0 16 16"
@@ -197,7 +197,7 @@ function SidebarContent() {
                         ></path>
                       </svg>
                       <svg
-                        class="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                        className="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                         width="16"
                         height="16"
                         viewBox="0 0 16 16"
@@ -215,12 +215,12 @@ function SidebarContent() {
 
                     <div
                       id="users-accordion-sub-2"
-                      class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-2"
+                      className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-2"
                     >
-                      <ul class="pt-2 pl-2">
+                      <ul className="pt-2 pl-2">
                         <li>
                           <a
-                            class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                            className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                             href="javascript:;"
                           >
                             Link 1
@@ -228,7 +228,7 @@ function SidebarContent() {
                         </li>
                         <li>
                           <a
-                            class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                            className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                             href="javascript:;"
                           >
                             Link 2
@@ -236,7 +236,7 @@ function SidebarContent() {
                         </li>
                         <li>
                           <a
-                            class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                            className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                             href="javascript:;"
                           >
                             Link 3
@@ -249,13 +249,13 @@ function SidebarContent() {
               </div>
             </li>
 
-            <li class="hs-accordion" id="account-accordion">
+            <li className="hs-accordion" id="account-accordion">
               <a
-                class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-semibold text-silver rounded-md hover:text-white hover:bg-black active:scale-105  duration-200"
+                className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-semibold text-silver rounded-md hover:text-white hover:bg-black active:scale-105  duration-200"
                 href="javascript:;"
               >
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
@@ -270,7 +270,7 @@ function SidebarContent() {
                 </svg>
                 Account
                 <svg
-                  class="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                  className="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                   width="16"
                   height="16"
                   viewBox="0 0 16 16"
@@ -285,7 +285,7 @@ function SidebarContent() {
                   ></path>
                 </svg>
                 <svg
-                  class="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                  className="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                   width="16"
                   height="16"
                   viewBox="0 0 16 16"
@@ -303,12 +303,12 @@ function SidebarContent() {
 
               <div
                 id="account-accordion"
-                class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
+                className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
               >
-                <ul class="pt-2 pl-2">
+                <ul className="pt-2 pl-2">
                   <li>
                     <a
-                      class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                      className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                       href="javascript:;"
                     >
                       Link 1
@@ -316,7 +316,7 @@ function SidebarContent() {
                   </li>
                   <li>
                     <a
-                      class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                      className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                       href="javascript:;"
                     >
                       Link 2
@@ -324,7 +324,7 @@ function SidebarContent() {
                   </li>
                   <li>
                     <a
-                      class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                      className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                       href="javascript:;"
                     >
                       Link 3
@@ -334,13 +334,13 @@ function SidebarContent() {
               </div>
             </li>
 
-            <li class="hs-accordion" id="projects-accordion">
+            <li className="hs-accordion" id="projects-accordion">
               <a
-                class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-semibold text-silver rounded-md hover:text-white hover:bg-black active:scale-105  duration-200"
+                className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-semibold text-silver rounded-md hover:text-white hover:bg-black active:scale-105  duration-200"
                 href="javascript:;"
               >
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
@@ -352,7 +352,7 @@ function SidebarContent() {
                 </svg>
                 Projects
                 <svg
-                  class="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                  className="hs-accordion-active:block ml-auto hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                   width="16"
                   height="16"
                   viewBox="0 0 16 16"
@@ -367,7 +367,7 @@ function SidebarContent() {
                   ></path>
                 </svg>
                 <svg
-                  class="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                  className="hs-accordion-active:hidden ml-auto block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
                   width="16"
                   height="16"
                   viewBox="0 0 16 16"
@@ -385,12 +385,12 @@ function SidebarContent() {
 
               <div
                 id="projects-accordion"
-                class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
+                className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
               >
-                <ul class="pt-2 pl-2">
+                <ul className="pt-2 pl-2">
                   <li>
                     <a
-                      class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                      className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                       href="javascript:;"
                     >
                       Link 1
@@ -398,7 +398,7 @@ function SidebarContent() {
                   </li>
                   <li>
                     <a
-                      class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                      className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                       href="javascript:;"
                     >
                       Link 2
@@ -406,7 +406,7 @@ function SidebarContent() {
                   </li>
                   <li>
                     <a
-                      class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
+                      className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300"
                       href="javascript:;"
                     >
                       Link 3
@@ -418,11 +418,11 @@ function SidebarContent() {
 
             <li>
               <a
-                class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-semibold text-silver rounded-md hover:text-white hover:bg-black active:scale-105  duration-200"
+                className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-semibold text-silver rounded-md hover:text-white hover:bg-black active:scale-105  duration-200"
                 href="javascript:;"
               >
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
@@ -437,11 +437,11 @@ function SidebarContent() {
             </li>
             <li>
               <a
-                class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-semibold text-silver rounded-md hover:text-white hover:bg-black active:scale-105  duration-200"
+                className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm font-semibold text-silver rounded-md hover:text-white hover:bg-black active:scale-105  duration-200"
                 href="javascript:;"
               >
                 <svg
-                  class="w-3.5 h-3.5"
+                  className="w-3.5 h-3.5"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"

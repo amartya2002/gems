@@ -13,13 +13,13 @@ function SidebarRow({ src, Icon, title, colour }) {
       onMouseLeave={() => setIsActive(false)}
     >
       {src && (
-        <Image
+        <img
           className="rounded-full "
           src={src}
           width={30}
           height={30}
           alt="Icons"
-          layout="fixed"
+          // layout="fixed"
         />
       )}
 
