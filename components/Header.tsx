@@ -8,8 +8,7 @@ import {
 } from "@heroicons/react/24/solid";
 import HeaderIcon from "./HeaderIcon";
 import SearchBar from "./SearchBar";
-import Dropdown from "./DropdownAvatar";
-import DropdownAvatar from "./DropdownAvatar";
+
 import Link from "next/link";
 
 function Header() {
@@ -52,7 +51,7 @@ function Header() {
 
       {/* right */}
       <div className="flex items-center sm:space-x-2 justify-end  ">
-        <DropdownAvatar />
+        
       
 
 
